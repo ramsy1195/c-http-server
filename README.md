@@ -3,7 +3,6 @@
 This project implements a basic HTTP/1.0-compatible server in C that supports both static file serving and dynamic lookup requests. It integrates with an `mdb-lookup-server` backend over a TCP socket, returning formatted HTML responses to client browsers.
 
 ## Features
-
 - Serves static files from a specified `webroot/` directory
 - Parses and validates HTTP GET requests
 - Securely handles request URIs (blocks `/../` directory traversal)
@@ -12,6 +11,15 @@ This project implements a basic HTTP/1.0-compatible server in C that supports bo
 - Sends appropriate HTTP status codes and reason phrases
 - Minimal external dependencies
 
+## Directory Structure
+```text
+.
+├── http-server.c         # Main C source file (HTTP server logic)
+├── Makefile              # Build configuration
+├── README.md             # Project documentation
+├── webroot/              # Static files (HTML, CSS, etc.)
+│   └── index.html        # Default page served at '/'
+```
 ## Build Instructions
 To compile the project:
 ```bash
